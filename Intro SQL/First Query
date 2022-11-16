@@ -1,0 +1,29 @@
+/* 1- Ecrire une requete qui retourne les 5 colonnes de la table recent_grads dans l'ordre suivant: Rank,
+  Major_code, Major, Major_category, total */
+  
+SELECT Rank, Major_code, Major, Major_category, total
+FROM recent_grads;
+
+/* 2- Filtrer les données et sélectionner les majors qui ont plus de femmes diplomées que les hommes*/
+
+SELECT Major, ShareWomen 
+FROM recent_grads
+WHERE ShareWomen > 0.5 ;
+
+/* 3- Requète qui retourne tous les majors avec plus de 10000 diplomés ayant un emploi. Puis 
+afficher les colonnes Major, Employed dans cet ordre*/
+
+SELECT Major, Employed
+FROM recent_grads
+WHERE Employed > 10000 ;
+
+/* Limiter le nombre de résultats 
+LIMIT 
+
+Requete SQL qui retourne la colonne Major, dans laquelle les diplomés ayant un emploi est superieur
+à 10000, vous allez afficher seulement les 10 premiers résultats*/
+
+SELECT Major
+FROM recent_grads
+WHERE Employed > 10000 
+LIMIT 10 ;

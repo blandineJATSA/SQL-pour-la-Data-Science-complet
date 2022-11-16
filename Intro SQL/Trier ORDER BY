@@ -1,0 +1,19 @@
+/* Trier les résultats avec ORDER BY
+ORDER BY ( ASC ou DESC )
+
+Retourner les 10 valeurs de la colonne Major dans l'ordre inverse alphabetique*/
+
+SELECT Major 
+FROM recent_grads
+ORDER BY Major DESC
+LIMIT 10 ;
+
+/* Ordre des résultats sur plusiueurs colonnes 
+
+Requete SQL qui classe les categories de Major ( Major_category) dans l'ordre croissant, puis 
+par salaire Median par ordre décroissant */
+
+SELECT Major_category, Major, Median 
+FROM recent_grads
+ORDER BY Major_category ASC, Median DESC
+LIMIT 20 ;

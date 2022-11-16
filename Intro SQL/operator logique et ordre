@@ -1,0 +1,23 @@
+/* conditions multiples avec AND et OR 
+
+Requete SQL qui retourne les 20 premieres majors qui ont un salaire médian superieur ou égal à 10000 
+ou un nombre de personnes sans emploi inferieur ou égal à 1000 */
+
+SELECT Major, Median, Unemployed
+FROM recent_grads
+WHERE Median > 10000 OR Unemployed <= 1000
+LIMIT 20 ;
+
+/*Grouper les opếrateurs avec des parenthèses 
+
+Trouver toutes les majors qui ont les critères suivants:
+- La catégorie de major (Major_category) sera Business, Arts ou Health
+- Les diplomés ayant un emploi (Employed) seront supérieurs à 20000 ou le taux de personnes
+sans emploi (Unemployment_rate) sera inferieur à 5.1%*/
+
+SELECT Major, Major_category, Employed, Unemployment_rate
+FROM recent_grads
+WHERE (Major_category ="Business" OR Major_category = "Arts" OR Major_category = "Health") 
+AND ( Employed > 20000 OR Unemployment_rate < 0.051) ;
+
+

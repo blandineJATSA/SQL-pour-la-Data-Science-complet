@@ -1,0 +1,32 @@
+/* Ecrire une requete qui recupère les 20 premiers lignes de la table avec seulement les colonnes 
+suivantes: College_jobs , Median, Unemployment_rate
+*/
+
+SELECT College_jobs, Median, Unemployment_rate
+FROM recent_grads
+LIMIT 20 ; 
+
+
+/* Requete qui retourne les 5 premiers lignes des majors Arts*/
+
+SELECT Major, Major_category
+FROM recent_grads
+WHERE Major_category = "Arts"
+LIMIT 5;
+
+/* Retourner toutes les majors differentes de Engineering: 
+- Avec un salaire médian inferieur ou égal à 50000 
+- OU avec un taux de personnes sans emploi suếrieur à 6.5%*/
+
+SELECT Major, total, Median, Unemployment_rate
+FROM recent_grads
+WHERE Major_category != "Engineering" AND  ( Median <= 50000 OR Unemployment_rate > 0.65) ;
+
+/* Retourner les 20 premiers majors dont la catégorie est diffferente de Engineering, 
+puis trier les resultats dans l'ordre inverse alphabetiques*/
+
+SELECT Major, Major_category
+FROM recent_grads
+WHERE Major_category !="Engineering"
+ORDER BY Major DESC 
+LIMIT 20 ;
