@@ -1,1 +1,8 @@
  Projet guidé 
+ Base de données SQLite
+ Nous allons travaillé sur la base World Factbook qui contient les informations sur la demagraphie de 267 pays dans le monde 
+ Pour chaque pays cette base contien les colonnes:
+ - population : qui contient le nombre d'habitants en 2015
+ - population_growth qui est le taux annuel de croissance de la population en % .
+ - area : qui est la surface totale de chaque pays
+ 
